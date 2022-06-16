@@ -1,0 +1,21 @@
+
+ion-tab-button {
+  ion-label {
+    display: none;
+  }
+}
+
+.active-workout {
+  border-radius: 15px 15px 0px 0px;
+  background: var(--ion-tab-bar-background, var(--ion-color-step-50, #f7f7f7));
+  ion-row {
+    margin-bottom: 1vh;
+  }
+}
+
+
+ion-label {
+  ion-icon {
+    margin-bottom: -2px;
+  }
+}

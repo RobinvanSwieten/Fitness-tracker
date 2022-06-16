@@ -1,0 +1,43 @@
+<ion-header [translucent]="true" collapse="fade">
+  <ion-toolbar class="">
+    <ion-title>Workouts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Workouts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="startWorkout()" expand="full" color="medium"><ion-icon name="add-circle-outline"></ion-icon>  <span>Start Empty Workout</span></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h5>My Workouts</h5>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let workout of workouts; let I1 = index" >
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ workout.name }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <span *ngFor="let exercise of workout.exercise; ">
+                {{ exercise.name }},
+            </span>
+            <ion-button (click)="startWorkout(I1)" style="margin-top: 1.5vh" expand="full" color="primary">Start Workout</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,29 @@
+.checkbox {
+  --background: #fff;
+  --border-radius: 0px;
+}
+
+ion-item-sliding {
+  ion-item {
+    --background: unset !important;
+  }
+}
+
+ion-grid, ion-col {
+  padding-inline-start: unset!important;
+  padding-inline-end: unset!important;
+}
+
+ion-label {
+  ion-icon {
+    margin-bottom: -2.6px;
+  }
+}
+
+ion-content {
+  --padding-bottom: 40vh;
+}
+
+.title {
+  font-size: 18px;
+}
